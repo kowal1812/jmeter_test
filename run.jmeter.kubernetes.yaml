@@ -27,7 +27,7 @@ parameters:
   default: false
 
 - name: mode
-  default: jmeter_dynamic
+  default: jmeter
   values:
     - tests
     - jmeter
