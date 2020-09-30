@@ -70,7 +70,7 @@ variables:
   data_dir_relative: ${{ parameters.data_dir }}
   thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
-  repoName: jmeter_simple_test
+  repoName: jmeter_test
   cruxRepoName: crux
   scenario: $(repoName)/${{ parameters.jmx }}
 
