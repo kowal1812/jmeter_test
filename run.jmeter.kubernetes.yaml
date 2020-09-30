@@ -42,7 +42,7 @@ parameters:
   type: number
 
 - name: jmx
-  default: path/to/jmeter/script/bing.jmx
+  default: path/to/jmeter/script/RequestProductsPerStore.jmx
   type: string
 
 - name: thresholds_file
