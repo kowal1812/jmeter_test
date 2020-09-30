@@ -1323,7 +1323,7 @@ vars.put(&quot;source_check&quot;,&quot;starting_offers&quot;);</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="-337013187">Insert Task Promo Start</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
@@ -1356,44 +1356,11 @@ vars.put(&quot;source_check&quot;,&quot;ending_offers&quot;);</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="1796281718">Insert Task Promo End</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
                   <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="PROMO END - Make check" enabled="true">
-                    <collectionProp name="ModuleController.node_path">
-                      <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="775368822">Make check</stringProp>
-                    </collectionProp>
-                  </ModuleController>
-                  <hashTree/>
-                </hashTree>
-                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Price" enabled="true">
-                  <stringProp name="IfController.condition">${coun} ==3</stringProp>
-                  <boolProp name="IfController.evaluateAll">false</boolProp>
-                </IfController>
-                <hashTree>
-                  <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
-                    <stringProp name="scriptLanguage">groovy</stringProp>
-                    <stringProp name="parameters"></stringProp>
-                    <stringProp name="filename"></stringProp>
-                    <stringProp name="cacheKey">true</stringProp>
-                    <stringProp name="script">vars.put(&quot;throughput&quot;,&quot;100&quot;);
-vars.put(&quot;source_check&quot;,&quot;business_critical&quot;);</stringProp>
-                  </JSR223Sampler>
-                  <hashTree/>
-                  <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="PRICE - Insert Task" enabled="true">
-                    <collectionProp name="ModuleController.node_path">
-                      <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1807700520">Insert Task - BC</stringProp>
-                    </collectionProp>
-                  </ModuleController>
-                  <hashTree/>
-                  <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="PRICE - Make check" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
@@ -1422,7 +1389,7 @@ vars.put(&quot;source_check&quot;,&quot;price_increases&quot;);</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="-1862380659">Insert Task Price Increase</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
@@ -1455,7 +1422,7 @@ vars.put(&quot;source_check&quot;,&quot;price_decreases&quot;);</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="-1384096279">Insert Task Price Decrease</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
@@ -1488,7 +1455,7 @@ vars.put(&quot;source_check&quot;,&quot;starting_offers_more_points&quot;);</str
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="1673717350">Insert Task Promo Start MP</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
@@ -1521,7 +1488,7 @@ vars.put(&quot;source_check&quot;,&quot;ending_offers&quot;);</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="2031153293">Insert Task Promo End MP</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
@@ -1554,7 +1521,7 @@ vars.put(&quot;source_check&quot;,&quot;promo_end_more_points_promo&quot;);</str
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="1765793246">Insert Task Promo End Promo MP</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
@@ -1587,7 +1554,7 @@ vars.put(&quot;source_check&quot;,&quot;promo_end_promo&quot;);</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
-                      <stringProp name="1505577612">Insert Task</stringProp>
+                      <stringProp name="-1702587963">Insert Task Promo End Promo</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
