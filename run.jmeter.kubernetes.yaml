@@ -42,7 +42,7 @@ parameters:
   type: number
 
 - name: jmx
-  default: path/to/jmeter/script/logbooks_history_SIT_QR_Code.jmx
+  default: path/to/jmeter/script/RequestProductsPerStore.jmx
   type: string
 
 - name: thresholds_file
