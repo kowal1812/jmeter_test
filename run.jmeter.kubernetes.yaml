@@ -14,7 +14,7 @@ resources:
 
     - repository: tests
       type: github
-      name: kowal1812/jmeter_test
+      name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
       #ref: refs/heads/feature/disks
       #ref: refs/tags/0.4.0
@@ -42,11 +42,15 @@ parameters:
   type: number
 
 - name: jmx
-  default: path/to/jmeter/script/RequestProductsPerStore.jmx
+  default: path/to/jmeter/script/bing.jmx
   type: string
 
 - name: thresholds_file
   default: path/to/jmeter/config/thresholds.properties
+  type: string
+  
+- name: storesFile
+  default: path/to/jmeter/test_data/C0_allStores.csv
   type: string
 
 - name: jmeter_args
@@ -70,8 +74,10 @@ variables:
   data_dir_relative: ${{ parameters.data_dir }}
   thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
-  repoName: jmeter_test
+  repoName: jmeter_simple_test
   cruxRepoName: crux
+  storesFile: $(repoName)/${{ parameters.storesFile }}
+  outputFile: C0_products_from_store.csv
   scenario: $(repoName)/${{ parameters.jmx }}
 
   #parameters of cluster if to be created (jmeter_dynamic)
