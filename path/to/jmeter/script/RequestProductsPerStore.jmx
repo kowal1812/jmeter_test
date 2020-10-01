@@ -25,7 +25,7 @@
           </elementProp>
           <elementProp name="storesFile" elementType="Argument">
             <stringProp name="Argument.name">storesFile</stringProp>
-            <stringProp name="Argument.value">${__P(storesFile,C:/jMeter/MRPI-POC/data/C0_allStores.csv)}</stringProp>
+            <stringProp name="Argument.value">${__P(storesFile,C0_allStores.csv)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="logsDir" elementType="Argument">
@@ -245,7 +245,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">US-ASCII</stringProp>
-          <stringProp name="filename">${storesFile}</stringProp>
+          <stringProp name="filename">${data_dir}/${storesFile}</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">false</boolProp>
