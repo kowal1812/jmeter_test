@@ -13,8 +13,8 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="JMconfig" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="dataDir" elementType="Argument">
-            <stringProp name="Argument.name">dataDir</stringProp>
+          <elementProp name="data_dir" elementType="Argument">
+            <stringProp name="Argument.name">data_dir</stringProp>
             <stringProp name="Argument.value">${__P(dataDir,C:/jMeter/MRPI-POC/data)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
@@ -227,8 +227,8 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="false">
-        <stringProp name="ThreadGroup.on_sample_error">stoptest</stringProp>
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
@@ -317,7 +317,7 @@ for(int i=0; i &lt; C0maxStores &amp;&amp; i &lt; lines.length ; i++) {
 FileWriter fstream = null;
 BufferedWriter out = null;
 
-fstream = new FileWriter(vars.get(&quot;dataDir&quot;)+&quot;/&quot;+vars.get(&quot;storesFile&quot;), false);
+fstream = new FileWriter(vars.get(&quot;data_dir&quot;)+&quot;/&quot;+vars.get(&quot;storesFile&quot;), false);
 out = new BufferedWriter(fstream);
 
 out.write(maxStoresInColumn);
@@ -342,7 +342,7 @@ import java.io.PrintStream;
 FileWriter fstream = null;
 BufferedWriter out = null;
 
-fstream = new FileWriter(vars.get(&quot;dataDir&quot;)+ &quot;/&quot; + vars.get(&quot;outputFile&quot;), false);
+fstream = new FileWriter(vars.get(&quot;data_dir&quot;)+ &quot;/&quot; + vars.get(&quot;outputFile&quot;), false);
 out = new BufferedWriter(fstream);
 
 out.write(&quot;&quot;);
@@ -465,7 +465,7 @@ JSONParser parser = new JSONParser(JSONParser.MODE_JSON_SIMPLE);
 JSONObject store = (JSONObject) parser.parse(data);
 JSONArray productList = (JSONArray) store.get(&quot;spacelist&quot;);
 
-f = new FileOutputStream(&quot;${dataDir}/products_from_store.csv&quot;, true);
+f = new FileOutputStream(&quot;${data_dir}/products_from_store.csv&quot;, true);
 p = new PrintStream(f); 
 this.interpreter.setOut(p); 
 int size = store.get(&quot;metadata&quot;).get(&quot;count&quot;);
@@ -478,7 +478,7 @@ String min = productList.get(i).getAsString(&quot;min&quot;);
 f.close();</stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
-          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="ExportResponseInVariable" enabled="false">
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="ExportResponseInVariable" enabled="true">
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
@@ -486,8 +486,8 @@ f.close();</stringProp>
 </stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
-          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="false">
-            <stringProp name="FileSaver.filename">${dataDir}/results</stringProp>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">${data_dir}/results</stringProp>
             <boolProp name="FileSaver.errorsonly">false</boolProp>
             <boolProp name="FileSaver.skipautonumber">false</boolProp>
             <boolProp name="FileSaver.skipsuffix">false</boolProp>
@@ -497,7 +497,7 @@ f.close();</stringProp>
           </ResultSaver>
           <hashTree/>
         </hashTree>
-        <CriticalSectionController guiclass="CriticalSectionControllerGui" testclass="CriticalSectionController" testname="Critical Section Controller" enabled="false">
+        <CriticalSectionController guiclass="CriticalSectionControllerGui" testclass="CriticalSectionController" testname="Critical Section Controller" enabled="true">
           <stringProp name="CriticalSectionController.lockName">global_lock</stringProp>
         </CriticalSectionController>
         <hashTree>
@@ -521,7 +521,7 @@ JSONObject store = (JSONObject) parser.parse(data);
 JSONArray productList = (JSONArray) store.get(&quot;spacelist&quot;);
 
 if (store.get(&quot;metadata&quot;) != null) {
-	f = new FileOutputStream(&quot;${dataDir}/${outputFile}&quot;, true);
+	f = new FileOutputStream(&quot;${data_dir}/${outputFile}&quot;, true);
 	p = new PrintStream(f); 
 	this.interpreter.setOut(p); 
 	int size = store.get(&quot;metadata&quot;).get(&quot;count&quot;);
