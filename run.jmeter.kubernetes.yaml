@@ -50,7 +50,7 @@ parameters:
   type: string
   
 - name: storesFile
-  default: path/to/jmeter/test_data/C0_allStores.csv
+  default: C0_allStores.csv
   type: string
 
 - name: jmeter_args
@@ -76,7 +76,7 @@ variables:
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: jmeter_test
   cruxRepoName: crux
-  storesFile: $(repoName)/${{ parameters.storesFile }}
+  storesFile: $(data_dir)/${{ parameters.storesFile }}
   scenario: $(repoName)/${{ parameters.jmx }}
 
   #parameters of cluster if to be created (jmeter_dynamic)
