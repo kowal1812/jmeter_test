@@ -77,7 +77,6 @@ variables:
   repoName: jmeter_test
   cruxRepoName: crux
   storesFile: $(repoName)/${{ parameters.storesFile }}
-  outputFile: C0_products_from_store.csv
   scenario: $(repoName)/${{ parameters.jmx }}
 
   #parameters of cluster if to be created (jmeter_dynamic)
