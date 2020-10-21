@@ -47,7 +47,7 @@ parameters:
   type: number
 
 - name: jmx
-  default: path/to/jmeter/script/RequestProductsPerStore.jmx
+  default: path/to/jmeter/script/test.jmx
   type: string
 
 - name: thresholds_file
