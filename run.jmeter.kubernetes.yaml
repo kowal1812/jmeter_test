@@ -22,7 +22,7 @@ resources:
       name: kowal1812/jmeter_test
       #ref: refs/tags/0.3.2
       #ref: refs/heads/feature/quality
-      ref: refs/heads/release/0.4.1
+      #ref: refs/tags/0.4.1
       endpoint: crux
 
 
