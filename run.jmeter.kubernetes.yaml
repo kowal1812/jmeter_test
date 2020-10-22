@@ -43,7 +43,7 @@ parameters:
   type: number
 
 - name: jmx
-  default: path/to/jmeter/script/test.jmx
+  default: path/to/jmeter/script/bing.jmx
   type: string
 
 - name: thresholds_file
