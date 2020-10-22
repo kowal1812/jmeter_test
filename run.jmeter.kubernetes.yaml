@@ -2,10 +2,7 @@
 # Remember to have 1-1 jmeter service to k8 node (VM)/pod ratio - otherwsie some slaves can crash due to lack of resources
 
 name: $(BuildID)
-trigger:
-  branches:
-    include:
-      - '*'
+
 resources:
   repositories:
     - repository: crux
@@ -31,7 +28,7 @@ parameters:
   default: false
 
 - name: mode
-  default: jmeter
+  default: tests
   values:
     - tests
     - jmeter
