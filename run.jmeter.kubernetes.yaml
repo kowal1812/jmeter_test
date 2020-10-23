@@ -49,10 +49,6 @@ parameters:
 - name: thresholds_file
   default: path/to/jmeter/config/thresholds.properties
   type: string
-  
-- name: storesFile
-  default: C0_allStores.csv
-  type: string
 
 - name: jmeter_args
   default: "-Gthreads=1 -Gloops=1 -Gdata_dir=/shared"
